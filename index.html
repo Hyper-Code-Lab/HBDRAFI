@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <!-- এই মেটা ট্যাগটি রেসপনসিভ ডিজাইনের জন্য সবচেয়ে গুরুত্বপূর্ণ -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>যশোরের তাজা খবর</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', "Noto Sans Bengali", sans-serif;
+            /* বেস ফন্ট সাইজ স্বাভাবিক রাখা হলো, টেইলউইন্ড এটা নিয়ন্ত্রণ করবে */
+        }
+        /* ছোট স্ক্রিনে নেভিগেশন বার যেন উপচে না পড়ে */
+        .mobile-nav-scroll {
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+        .mobile-nav-scroll::-webkit-scrollbar {
+            display: none; /* ক্রোম, সাফারি-তে স্ক্রলবার হাইড করার জন্য */
+        }
+        .mobile-nav-scroll {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <!-- হেডার বা নিউজ পোর্টালের উপরের অংশ -->
+    <header class="bg-red-700 text-white shadow-lg">
+        <!-- উপরের অংশ - লোগো ও তারিখ -->
+        <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center text-center sm:text-left space-y-3 sm:space-y-0">
+            <!-- লোগো -->
+            <h1 class="text-2xl sm:text-3xl font-bold border-4 border-white px-2 py-1">
+                যশোরের তাজা খবর
+            </h1>
+            <!-- তারিখ -->
+            <div class="text-right">
+                <!-- মোবাইলের জন্য তারিখের ফন্ট ছোট করা হলো -->
+                <p class="text-base sm:text-lg font-semibold">সোমবার, ৩ নভেম্বর, ২০২৫</p>
+                <p class="text-xs sm:text-sm">যশোর সংস্করণ</p>
+            </div>
+        </div>
+        <!-- নেভিগেশন বার (ফেইক) -->
+        <nav class="bg-gray-800 text-white">
+            <div class="max-w-6xl mx-auto px-2 sm:px-4">
+                <!-- ছোট স্ক্রিনের জন্য স্ক্রলযোগ্য করা হলো -->
+                <ul class="flex space-x-4 sm:space-x-6 py-2 mobile-nav-scroll">
+                    <li class="hover:bg-red-600 px-3 py-1 rounded-md flex-shrink-0"><a href="#">হোম</a></li>
+                    <li class="hover:bg-red-600 px-3 py-1 rounded-md flex-shrink-0"><a href="#">অপরাধ</a></li>
+                    <li class="hover:bg-red-600 px-3 py-1 rounded-md flex-shrink-0"><a href="#">যশোর</a></li>
+                    <li class="hover:bg-red-600 px-3 py-1 rounded-md flex-shrink-0"><a href="#">রাজনীতি</a></li>
+                    <li class="hover:bg-red-600 px-3 py-1 rounded-md flex-shrink-0"><a href="#">খেলাধুলা</a></li>
+                    <li class="hover:bg-red-600 px-3 py-1 rounded-md flex-shrink-0"><a href="#">আন্তর্জাতিক</a></li>
+                    <li class="hover:bg-red-600 px-3 py-1 rounded-md flex-shrink-0"><a href="#">বিনোদন</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- মূল সংবাদ -->
+    <!-- মোবাইলের জন্য প্যাডিং কমানো হলো (p-4) -->
+    <main class="max-w-4xl mx-auto bg-white shadow-xl rounded-lg mt-4 sm:mt-6 p-4 sm:p-6 md:p-8">
+        
+        <!-- প্রধান শিরোনাম (মোবাইলে text-2xl) -->
+        <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-red-800 mb-3 leading-tight">
+            যশোরে তরুণদের মধ্যে বাড়ছে এইডস সংক্রমণ
+        </h1>
+        <!-- উপ-শিরোনাম (মোবাইলে text-lg) -->
+        <p class="text-lg sm:text-xl text-gray-700 mb-6 font-semibold">
+            বিশেষজ্ঞরা বলছেন 'অসামাজিক কার্যকলাপ' ও 'বিজাতীয় সংস্কৃতি'ই দায়ী! এক তরুণের বেডরুমের ছবি ও ভিডিও ফাঁস!
+        </p>
+
+        <!-- রিপোর্টারের তথ্য (মোবাইলে ভার্টিক্যালি স্ট্যাক করা হলো) -->
+        <div class="flex flex-col sm:flex-row justify-between sm:items-center border-y-2 border-gray-200 py-3 mb-6 space-y-3 sm:space-y-0">
+            <div>
+                <p class="text-red-600 font-bold text-base sm:text-lg">বিশেষ অনুসন্ধানী দল</p>
+                <p class="text-gray-500 text-xs sm:text-sm">প্রকাশিত: ৩ নভেম্বর ২০২৫, রাত ১০:৫৭</p>
+            </div>
+            <!-- ফেইক শেয়ার বাটন -->
+            <div class="flex space-x-2">
+                <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-xs sm:text-sm font-semibold">Share</span>
+                <span class="bg-green-500 text-white px-3 py-1 rounded-full text-xs sm:text-sm font-semibold">Tweet</span>
+            </div>
+        </div>
+
+        <!-- সংবাদ শুরু -->
+
+        <!-- ছবি যোগ করার জায়গা -->
+        <div class="w-full bg-gray-200 border-4 border-dashed border-gray-400 rounded-lg p-4 text-center mb-4">
+            <!-- মোবাইলের জন্য টেক্সট সাইজ অ্যাডজাস্ট করা হলো -->
+            <p class="text-gray-600 font-semibold text-lg sm:text-xl">
+                --- এখানে তোর সেই জড়ায়া ধরা ছবিটা দিবি ---
+            </p>
+            <p class="text-gray-500 text-sm sm:text-base">(Your 'cuddling' photo goes here)</p>
+            <img src="IMAGE_LINK.jpg" alt="ফাঁস হওয়া ছবি" class="w-full rounded-lg">
+        </div>
+        <p class="text-center text-gray-600 italic text-sm mb-6">
+            ফাঁস হওয়া সেই বিতর্কিত ছবি, যেখানে দুই বন্ধুকে 'অস্বাভাবিক' অবস্থায় দেখা যাচ্ছে। (ছবি: প্রধান গোয়েন্দা ইমন)
+        </p>
+
+        <!-- মূল টেক্সট (মোবাইলের জন্য text-base) -->
+        <article class="space-y-6 text-gray-800 text-base sm:text-lg leading-relaxed">
+            <p class="font-bold text-lg sm:text-xl">যশোর ব্যুরো:</p>
+            <p>
+                যশোর শহরে আশঙ্কাজনকভাবে ছড়িয়ে পড়ছে মরণব্যাধি এইডস। বিশেষ করে তরুণ সমাজের মধ্যে এর প্রবণতা দেখে কপালে ভাঁজ পড়েছে স্বাস্থ্যকর্মীদের। আমাদের বিশেষ অনুসন্ধানী দলের হাতে এমন এক তরুণের চাঞ্চল্যকর তথ্য এসেছে, যাকে এই 'সামাজিক অবক্ষয়ের' প্রতিচ্ছবি বলা চলে।
+            </p>
+            <p>
+                নাম প্রকাশে অনিচ্ছুক (তবে তার বন্ধুরা তাকে 'রিজওয়ান মাহদী রাফি' বা 'Rafi' বলে ডাকে) এই তরুণকে সম্প্রতি এক পুরুষ বন্ধুর সাথে তার বেডরুমে অন্তরঙ্গ অবস্থায় দেখা গেছে। উপরে সংযুক্ত ছবিটি আমাদের হাতে আসার পর আমরা এর পেছনের সত্যতা খুঁজতে থাকি।
+            </p>
+            <p>
+                শহরের বিশিষ্ট সমাজবিজ্ঞানী ড. আমজাদ হোসেন (কল্পিত নাম) এই ছবি দেখে আঁতকে উঠে বলেন, "আমি তো পুরাই শক্! এটা আমাদের সংস্কৃতি না। দুইটা জোয়ান পোলা এমন কইরা একজন আরেকজনকে জড়ায়া ধইরা ঘুমাবে ক্যান? এর মধ্যেই তো 'কিন্তু' আছে। এইভাবেই প্রথমে বন্ধুত্ব, তারপর 'অস্বাভাবিক' সম্পর্ক, আর তার থেকেই ছড়াচ্ছে এইডস।"
+            </p>
+            <p>
+                এই তরুণের কুকীর্তি শুধু এখানেই শেষ নয়। আমাদের হাতে আসা এক চাঞ্চল্যকর ভিডিও ফুটেজে দেখা যায়, অভিযুক্ত তরুণ ও তার কতিপয় বন্ধুকে যশোর নিউমার্কেটের <span class="font-bold text-red-600">মহিলাদের ওয়াশরুম</span> থেকে দলবদ্ধভাবে হাসতে হাসতে বের হতে দেখা গেছে!
+            </p>
+
+            <!-- ভিডিও যোগ করার জায়গা -->
+            <div class="w-full bg-gray-800 border-4 border-dashed border-gray-500 rounded-lg p-4 text-center aspect-video flex items-center justify-center mb-4">
+                <div>
+                    <!-- মোবাইলের জন্য টেক্সট সাইজ অ্যাডজাস্ট করা হলো -->
+                    <p class="text-white font-semibold text-xl sm:text-2xl">
+                        --- এখানে তোদের মেয়েদের ওয়াশরুমের ভিডিওটা দিবি ---
+                    </p>
+                    <p class="text-gray-400 text-sm sm:text-base">(Your 'women's washroom' video goes here)</p>
+                    <video controls class="w-full rounded-lg"><source src="VIDEO_LINK.mp4" type="video/mp4"></video>
+                </div>
+            </div>
+            <p class="text-center text-gray-600 italic text-sm mb-6 -mt-2">
+                সেই চাঞ্চল্যকর ভিডিও ফুটেজ, যেখানে অভিযুক্ত তরুণ ও তার সঙ্গীদের মহিলাদের ওয়াশরুম থেকে প্রস্থান করতে দেখা যাচ্ছে। (ভিডিও: গোয়েন্দা ইমন হাসান হৃদয়)
+            </p>
+
+            <p>
+                প্রত্যক্ষদর্শী এক ক্লিনার (নাম গোপন রাখা হলো) জানান, "আমি তো দেইখা তাজ্জব! ৫-৬টা জোয়ান পোলা মাইয়াগো বাথরুম থেইকা খিলখিল কইরা হাসতে হাসতে বাইর হইতাছে। ভিতরে কী এমন মধু পাইছিলো আল্লাহ মালুম। আমি ঝাড়ু নিয়া ধাওয়া দিতেই দৌড় দিছে।"
+            </p>
+            <p>
+                যশোরের সুশীল সমাজ এই ঘটনায় তীব্র নিন্দা জানিয়েছে। তারা বলছেন, "এইসব 'রংধনু সন্ত্রাস'দের' এখনই না থামালে সমাজ রসাতলে যাবে। এদের কারণেই আজ এইডস বাড়ছে।"
+            </p>
+            <p class="font-bold text-lg sm:text-xl text-red-700 bg-red-50 p-3 sm:p-4 rounded-lg">
+                আজ এই অভিযুক্ত তরুণের জন্মদিন। জন্মদিনের এই বিশেষ মুহূর্তে আমরা তার দীর্ঘায়ু কামনা করছি না, বরং তার সুস্থ ও 'স্বাভাবিক' জীবনে ফিরে আসার জন্য দোয়া করছি।
+            </p>
+
+        </article>
+
+        <!-- আসল কথা (Disclaimer) -->
+        <div class="mt-12 bg-blue-100 border-t-4 border-blue-500 rounded-b text-blue-900 px-3 sm:px-4 py-3 shadow-md" role="alert">
+            <div class="flex">
+                <div class="py-1"><svg class="fill-current h-6 w-6 text-blue-500 mr-2 sm:mr-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zM9 11v4h2v-4H9zm0-4h2v2H9V7z"/></svg></div>
+                <div>
+                    <p class="font-bold text-lg sm:text-xl">বিশেষ দ্রষ্টব্য!</p>
+                    <p class="text-base sm:text-lg">
+                        এই সংবাদের সকল চরিত্র, ঘটনা এবং তথ্য সম্পূর্ণ কাল্পনিক ও তোর জন্মদিনের বিনোদনের জন্য তৈরি। কারো জীবনের সাথে মিলে গেলে তা নিতান্তই ফাজলামি।
+                    </p>
+                    <p class="font-bold text-xl sm:text-2xl mt-4 text-center text-pink-600">
+                        !!! শুভ জন্মদিন, দোস্ত !!!
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- ফেইক কমেন্ট সেকশন -->
+    <section class="max-w-4xl mx-auto bg-white shadow-xl rounded-lg mt-6 p-4 sm:p-6 md:p-8">
+        <h3 class="text-xl sm:text-2xl font-bold mb-4 border-b pb-2">মতামত (৩)</h3>
+        <div class="space-y-4">
+            <!-- ফেইক কমেন্ট ১ -->
+            <div class="border p-3 sm:p-4 rounded-lg bg-gray-50">
+                <p class="font-bold text-base sm:text-lg"> ইয়াসির আরাফাত সিয়াম (মহাবাড়াচার্য)</p>
+                <p class="text-xs sm:text-sm text-gray-500">১ ঘণ্টা আগে</p>
+                <p class="mt-2 text-sm sm:text-base">আমি আগেই বলেছিলাম! এই ছেলেরে ধইরা চিকিৎসা করানো দরকার।</p>
+            </div>
+            <!-- ফেইক কমেন্ট ২ -->
+            <div class="border p-3 sm:p-4 rounded-lg bg-gray-50">
+                <p class="font-bold text-base sm:text-lg">আয়মন শিকদার</p>
+                <p class="text-sm text-gray-500">৪৫ মিনিট আগে</p>
+                <p class="mt-2 text-sm sm:text-base">মাইয়াগো বাথরুমে ওগো কী কাম? ছিঃ ছিঃ!</p>
+            </div>
+            <!-- ফেইক কমেন্ট ৩ -->
+            <div class="border p-3 sm:p-4 rounded-lg bg-gray-50">
+                <p class="font-bold text-base sm:text-lg">সমাজের চিন্তিত নাগরিক</p>
+                <p class="text-sm text-gray-500">১০ মিনিট আগে</p>
+                <p class="mt-2 text-sm sm:text-base">শুভ জন্মদিন। আল্লাহ হেদায়েত দান করুক।</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ফুটার -->
+    <footer class="text-center text-gray-500 text-xs sm:text-sm mt-8 sm:mt-12 pb-8 px-4">
+        <p>&copy; ২০২৫ সর্বস্বত্ব সংরক্ষিত, যশোরের তাজা খবর।</p>
+        <p>এই পোর্টালের সকল সংবাদ কাল্পনিক।</p>
+    </footer>
+
+</body>
+</html>
+
